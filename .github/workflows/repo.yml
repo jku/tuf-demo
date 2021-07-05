@@ -17,9 +17,6 @@ jobs:
       - run: |
           pip install git+https://github.com/theupdateframework/tuf.git
           pip install click
-      - uses: actions/checkout@v2
-        with:
-          repository: 'jku/tufctl'
-          path: 'tufctl/'
-      - run: echo "🖥️ Test done."
-      - run: ls tufctl/
+      - run: |
+          cd metadata
+          ../tufctl/tufctl status
