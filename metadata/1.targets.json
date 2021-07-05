@@ -1,0 +1,20 @@
+{
+ "signatures": [
+  {
+   "keyid": "8f3c2794f24426014fc26adcbb8efd94411fce881fa60fc8725a899115750efa",
+   "sig": "3fa98dc6467384f0c53bee60f5b4a9ef88a28411ba77ce9bee32f0b74b78b514466212d455d17c86aef4ffab31f36850b97dfd1618d1ada5dd6d98cc45b9b008"
+  }
+ ],
+ "signed": {
+  "_type": "targets",
+  "delegations": {
+   "keys": {},
+   "roles": []
+  },
+  "expires": "2021-07-18T13:37:45Z",
+  "spec_version": "1.0.19",
+  "targets": {},
+  "version": 1,
+  "x-tufrepo-expiry-period": 86400
+ }
+}

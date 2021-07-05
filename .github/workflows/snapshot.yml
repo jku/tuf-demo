@@ -1,0 +1,40 @@
+name: TUF repository snapshot
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  tuf-snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: install dependencies
+        run: |
+          pip install git+https://github.com/theupdateframework/tuf.git
+          pip install git+https://github.com/vmware-labs/repository-editor-for-tuf.git
+
+      - name: Repo snapshot
+        env:
+          TUF_REPO_PRIVATE_KEY_38600820f11a5f7d7ff42e6dfc9b03fd60272a3be6f895da2d882cea8bb1e20f: ${{ secrets.TUF_REPO_PRIVATE_KEY_38600820f11a5f7d7ff42e6dfc9b03fd60272a3be6f895da2d882cea8bb1e20f }}
+          TUF_REPO_PRIVATE_KEY_9d78543b508f99a95a3c31fad3cffef0644134f1a028b30501acc12058c7c3e8: ${{ secrets.TUF_REPO_PRIVATE_KEY_9d78543b508f99a95a3c31fad3cffef0644134f1a028b30501acc12058c7c3e8 }}
+        run: |
+          cd metadata
+          tufrepo verify --root-hash 24d9b03f10ce0fe2e648833de26af60a4a8cd4e65bb396a8200a3194ae8ea76e || {
+            echo "repository is not in valid state: running snapshot"
+            tufrepo snapshot
+
+            # verify the repo is now valid, and that starting root is the correct one
+            tufrepo verify --root-hash 24d9b03f10ce0fe2e648833de26af60a4a8cd4e65bb396a8200a3194ae8ea76e
+
+            git config user.name tufrepo
+            git config user.email jkukkonen@vmware.com
+            git commit -a -m "Repository snapshot"
+            git show
+            git push
+          }
