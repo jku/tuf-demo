@@ -1,0 +1,25 @@
+name: TUF repository test
+
+on:
+  pull_request:
+    branches: [ $default-branch ]
+  workflow_dispatch:
+
+jobs:
+  tuf-snapshot-update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - run: |
+          pip install git+https://github.com/theupdateframework/tuf.git
+          pip install click
+      - uses: actions/checkout@v2
+        with:
+          repository: 'jku/tufctl'
+          path: 'tufctl/'
+      - run: echo "🖥️ Test done."
+      - run: ls tufctl/
