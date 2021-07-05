@@ -14,9 +14,14 @@ jobs:
         with:
           python-version: 3.9
 
-      - run: |
+      - name: install dependencies
+        run: |
           pip install git+https://github.com/theupdateframework/tuf.git
           pip install click
-      - run: |
+
+      - name: Test tufctl for repo snapshot
+        env:
+          online_keys: ${{ secrets.online_keys }}
+        run: |
           cd metadata
           ../tufctl/tufctl status

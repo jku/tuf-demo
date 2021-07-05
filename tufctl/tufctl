@@ -42,19 +42,8 @@ logger = logging.getLogger(__name__)
 
 class TufCtl:
     def __init__(self):
-        try:
-            with open(".tufctl", "r") as file:
-                logger.debug("Loading .tufctl")
-                self.state = json.load(file)
-        except FileNotFoundError:
-            self.state = {
-                "keyrings": {},
-            }
-
-    def __del__(self):
-        with open(".tufctl", "w") as file:
-            logger.debug("Writing .tufctl")
-            file.write(json.dumps(self.state, indent=1))
+        online_keys = os.getenv('online_keys')
+        self.state = json.loads(online_keys)
 
     @staticmethod
     def _get_expiry(expiry_period: int) -> datetime:
