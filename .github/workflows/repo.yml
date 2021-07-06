@@ -16,6 +16,7 @@ jobs:
 
       - name: install dependencies
         run: |
+          pip install securesystemslib[pynacl]
           pip install git+https://github.com/theupdateframework/tuf.git
           pip install click
 
@@ -24,4 +25,14 @@ jobs:
           online_keys: ${{ secrets.online_keys }}
         run: |
           cd metadata
-          ../tufctl/tufctl status
+          ../tufctl/tufctl status || {
+            # repository is not in valid state
+            ../tufctl/tufctl snapshot
+            ../tufctl/tufctl status
+
+            git config user.name tufctl-repo-tool
+            git config user.email jkukkonen@vmware.com
+            git add *.json
+            git commit -m "Snapshot & sign"
+            git push
+          }
