@@ -1,8 +1,8 @@
 name: TUF repository test
 
 on:
-  pull_request:
-    branches: [ $default-branch ]
+  pull_request_target:
+    branches: [ master ]
   workflow_dispatch:
 
 jobs:
