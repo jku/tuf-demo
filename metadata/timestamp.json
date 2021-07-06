@@ -2,19 +2,19 @@
  "signatures": [
   {
    "keyid": "c9d16cd1ac840a48b2e675c54827d1dd59c9099aadb9302a70c610dbd5fadd83",
-   "sig": "96d8aeb10f47e0517e867c692ba3c769623c8829b27a471b04f55065227b2bb96f3c05b06b1bedfbb4047229f4e322f2263e8c03a870fadf520a3806bfc10c05"
+   "sig": "e087ee7e33db480684de0361ad8ad9f200c26680362525bd6460a48dba9d2366c8c77aa0da250be2753f4c6acbfcf24978178e440142049aced8bcab17e3680f"
   }
  ],
  "signed": {
   "_type": "timestamp",
-  "expires": "2021-07-07T17:54:34Z",
+  "expires": "2021-07-07T18:03:46Z",
   "meta": {
    "snapshot.json": {
-    "version": 3
+    "version": 4
    }
   },
   "spec_version": "1.0.19",
-  "version": 3,
+  "version": 4,
   "x-tufctl-expiry-period": 86400
  }
 }
