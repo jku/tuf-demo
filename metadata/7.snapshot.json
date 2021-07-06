@@ -1,0 +1,20 @@
+{
+ "signatures": [
+  {
+   "keyid": "54e32f2bee7b2f72078590bd67783a6cfeb39ccb87e21d1223ff7527b41e75da",
+   "sig": "69e689a4fe836548b7513ac77a16802dec2c7bf35ddd5af267c5d8c3fcfbb3eae96d587ae5016e935c8b32c8da73ccd43eaf7111292c4c846fa8399512957f08"
+  }
+ ],
+ "signed": {
+  "_type": "snapshot",
+  "expires": "2022-07-05T19:41:43Z",
+  "meta": {
+   "targets.json": {
+    "version": 6
+   }
+  },
+  "spec_version": "1.0.19",
+  "version": 7,
+  "x-tufctl-expiry-period": 31449600
+ }
+}
