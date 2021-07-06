@@ -1,12 +1,12 @@
-name: TUF repository snapshot
+name: TUF repository timestamp update
 
 on:
-  push:
-    branches: [ master ]
+  schedule:
+    - cron:  '30 18 * * *'
   workflow_dispatch:
 
 jobs:
-  tuf-snapshot:
+  tuf-timestamp:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -25,15 +25,11 @@ jobs:
           online_keys: ${{ secrets.online_keys }}
         run: |
           cd metadata
-          ../tufctl/tufctl status || {
-            echo "repository is not in valid state: running snapshot"
-            ../tufctl/tufctl snapshot
-            ../tufctl/tufctl status
+          ../tufctl/tufctl edit timestamp touch
 
-            git config user.name tufctl-repo-tool
-            git config user.email jkukkonen@vmware.com
-            git add *.json
-            git commit -m "Snapshot & sign"
-            git show
-            git push
-          }
+          git config user.name tufctl-repo-tool
+          git config user.email jkukkonen@vmware.com
+          git add timestamp.json
+          git commit -m "Snapshot & sign"
+          git show
+          git push

@@ -25,7 +25,6 @@ jobs:
           online_keys: ${{ secrets.online_keys }}
         run: |
           cd metadata
-          git show --shortstat
 
           # return error if 
           # * status is non-zero and 
