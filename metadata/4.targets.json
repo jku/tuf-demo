@@ -1,0 +1,27 @@
+{
+ "signatures": [
+  {
+   "keyid": "7fc3fcf6f5c499729ec5d145ed3e37fc6821f03c9750d4b5ab96aee8db3213d4",
+   "sig": "3369accbf8054482f3571d6711c0a899f2ebe2e1c29388381cc22a8f469f2107608197fdfdc8fb80134259a91a9ba571d1317093adacfdc0cfdb0b5c5248990f"
+  }
+ ],
+ "signed": {
+  "_type": "targets",
+  "delegations": {
+   "keys": {},
+   "roles": []
+  },
+  "expires": "2021-07-07T18:08:32Z",
+  "spec_version": "1.0.19",
+  "targets": {
+   "test": {
+    "hashes": {
+     "sha256": "28f47011aee302bc4d640659b0f449aeff72a45a0bd7b136162a5ecf278f1781"
+    },
+    "length": 568
+   }
+  },
+  "version": 4,
+  "x-tufctl-expiry-period": 86400
+ }
+}
