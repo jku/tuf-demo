@@ -29,7 +29,6 @@ jobs:
 
           git config user.name tufctl-repo-tool
           git config user.email jkukkonen@vmware.com
-          git add timestamp.json
-          git commit -m "Timestamp & sign"
+          git commit -a -m "Timestamp & sign"
           git show
           git push

@@ -32,8 +32,7 @@ jobs:
 
             git config user.name tufctl-repo-tool
             git config user.email jkukkonen@vmware.com
-            git add *.json
-            git commit -m "Snapshot & sign"
+            git commit -a -m "Snapshot & sign"
             git show
             git push
           }
