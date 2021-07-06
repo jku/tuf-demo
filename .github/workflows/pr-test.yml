@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  tuf-snapshot-update:
+  tuf-snapshot-test-pr:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -26,15 +26,12 @@ jobs:
         run: |
           cd metadata
           git show --shortstat
+
+          # return error if 
+          # * status is non-zero and 
+          # * creating a snapshot does not help
           ../tufctl/tufctl status || {
             echo "repository is not in valid state: running snapshot"
             ../tufctl/tufctl snapshot
             ../tufctl/tufctl status
-
-            git config user.name tufctl-repo-tool
-            git config user.email jkukkonen@vmware.com
-            git add *.json
-            git commit -m "Snapshot & sign"
-            git show
-            git push
           }

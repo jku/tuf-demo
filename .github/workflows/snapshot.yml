@@ -1,0 +1,40 @@
+name: TUF repository snapshot
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  tuf-snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: install dependencies
+        run: |
+          pip install securesystemslib[pynacl]
+          pip install git+https://github.com/theupdateframework/tuf.git
+          pip install click
+
+      - name: Repo snapshot
+        env:
+          online_keys: ${{ secrets.online_keys }}
+        run: |
+          cd metadata
+          git show --shortstat
+          ../tufctl/tufctl status || {
+            echo "repository is not in valid state: running snapshot"
+            ../tufctl/tufctl snapshot
+            ../tufctl/tufctl status
+
+            git config user.name tufctl-repo-tool
+            git config user.email jkukkonen@vmware.com
+            git add *.json
+            git commit -m "Snapshot & sign"
+            git show
+            git push
+          }
