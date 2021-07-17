@@ -1,4 +1,4 @@
-name: TUF repository timestamp update
+name: TUF repository timestamp
 
 on:
   schedule:
@@ -16,19 +16,20 @@ jobs:
 
       - name: install dependencies
         run: |
-          pip install securesystemslib[pynacl]
           pip install git+https://github.com/theupdateframework/tuf.git
-          pip install click
+          pip install git+https://github.com/vmware-labs/repository-editor-for-tuf.git
 
-      - name: Repo snapshot
+      - name: Repo timestamp
         env:
-          online_keys: ${{ secrets.online_keys }}
+          TUF_REPO_PRIVATE_KEY_38600820f11a5f7d7ff42e6dfc9b03fd60272a3be6f895da2d882cea8bb1e20f: ${{ secrets.TUF_REPO_PRIVATE_KEY_38600820f11a5f7d7ff42e6dfc9b03fd60272a3be6f895da2d882cea8bb1e20f }}
         run: |
           cd metadata
-          ../tufctl/tufctl edit timestamp touch
 
-          git config user.name tufctl-repo-tool
+          tufrepo verify --root-hash 24d9b03f10ce0fe2e648833de26af60a4a8cd4e65bb396a8200a3194ae8ea76e
+          tufrepo edit timestamp touch
+
+          git config user.name tufrepo
           git config user.email jkukkonen@vmware.com
-          git commit -a -m "Timestamp & sign"
+          git commit -a -m "Repository timestamp"
           git show
           git push
