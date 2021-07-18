@@ -1,0 +1,27 @@
+{
+ "signatures": [
+  {
+   "keyid": "5c50e8d17ebd2fd3bc9c26774f095be53ff46fca7de8c956f5c4108cdca2e1e9",
+   "sig": "4a32638eac2c088e3a87295f3eb942872ce7f18e3365e5ab3f3d063f2344c66a74d1c1cd34400576a19ee3ab0fa4d96d2c88abd01906ff930fb0c8be8290cc0c"
+  }
+ ],
+ "signed": {
+  "_type": "targets",
+  "delegations": {
+   "keys": {},
+   "roles": []
+  },
+  "expires": "2022-07-17T08:47:30Z",
+  "spec_version": "1.0.19",
+  "targets": {
+   "files/file2.txt": {
+    "hashes": {
+     "sha256": "63a6c8a6acd993c6e7cfb7014f364586d6f6c2eefc5bfe1bacd2d2c387481be9"
+    },
+    "length": 3
+   }
+  },
+  "version": 2,
+  "x-tufrepo-expiry-period": 31449600
+ }
+}
