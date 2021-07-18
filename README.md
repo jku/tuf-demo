@@ -1,6 +1,6 @@
 # tuf-repo-test
 
-Test tufctl + Github Actions as an automated TUF repository:
+Test [tufrepo](https://github.com/vmware-labs/repository-editor-for-tuf) + Github Actions as an automated TUF repository:
  * snapshot and timestamp keys are stored in Github Secrets
  * Timestamp updates happen as cron action
  * Snapshot updates happen as an action after every push (if needed)
