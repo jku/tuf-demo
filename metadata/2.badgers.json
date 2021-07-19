@@ -1,0 +1,16 @@
+{
+ "signatures": [
+  {
+   "keyid": "2012c33cdeec3317ee0cbd9de5a4141870ed28a6bd1a59282d2c8b9e4ec30392",
+   "sig": "075bbb024ef60f723c4b8a0b83efef38248a28521037dffc135b7de663956e8b0dd027f428dd16b3622815fc4a0bed6368424e1947c4b03d70d355bbb9c6fc04"
+  }
+ ],
+ "signed": {
+  "_type": "targets",
+  "expires": "2022-07-18T12:57:51Z",
+  "spec_version": "1.0.19",
+  "targets": {},
+  "version": 2,
+  "x-tufrepo-expiry-period": 31449600
+ }
+}
