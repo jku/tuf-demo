@@ -1,0 +1,23 @@
+{
+ "signatures": [
+  {
+   "keyid": "5c50e8d17ebd2fd3bc9c26774f095be53ff46fca7de8c956f5c4108cdca2e1e9",
+   "sig": "6919f4b0980b84df7107e2b7baa4456a07c3d288ff4dd6a95721f76dbe0c1c93e45f4551d974026fdce9e0e4792d078f66b1bdae4a637e08955acb527d5dc10c"
+  }
+ ],
+ "signed": {
+  "_type": "targets",
+  "expires": "2022-07-18T14:06:47Z",
+  "spec_version": "1.0.19",
+  "targets": {
+   "files/file2.txt": {
+    "hashes": {
+     "sha256": "41c10d0f35de8842bec581404484624a68b2712e1bb590a45b4b7ea22a90f447"
+    },
+    "length": 8
+   }
+  },
+  "version": 5,
+  "x-tufrepo-expiry-period": 31449600
+ }
+}
