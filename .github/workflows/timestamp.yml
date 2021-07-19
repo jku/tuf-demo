@@ -30,7 +30,7 @@ jobs:
           tufrepo verify --root-hash 24d9b03f10ce0fe2e648833de26af60a4a8cd4e65bb396a8200a3194ae8ea76e
 
           git config user.name tufrepo
-          git config user.email jkukkonen@vmware.com
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git commit -a -m "Repository timestamp"
           git show
           git push
