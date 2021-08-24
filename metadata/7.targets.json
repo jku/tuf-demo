@@ -1,14 +1,22 @@
 {
  "signatures": [
   {
-   "keyid": "425b0d4b5a07f4db2be567e8d1508cd652968ab5acc4904d79740ec11d69d80f",
-   "sig": "979a77efc06a1197dfbc47e15502ef09559e7d137ee56ac1e46e3e7ed894208ecc7116dd0d241d4d0f6868aed2eddc024c1f7b8b367cf2ed535b65af0f630f0a"
+   "keyid": "8f3c2794f24426014fc26adcbb8efd94411fce881fa60fc8725a899115750efa",
+   "sig": "e1b54c09c4571b70288079011db0f35656472e83a6b31ef688493fb09ed8890825d4803126aa144948d9475cd65ae83295fdc6d3e41c06e5bbeaa10005d7d40b"
   }
  ],
  "signed": {
   "_type": "targets",
   "delegations": {
    "keys": {
+    "1d6deff4f7f41f6554e32b6e9ef38fe7374815f06f9d54132b2a6d2d850d294c": {
+     "keyid": "1d6deff4f7f41f6554e32b6e9ef38fe7374815f06f9d54132b2a6d2d850d294c",
+     "keytype": "ed25519",
+     "keyval": {
+      "public": "551650b8a3b806c7040c9d9fd59fd72dc9e0a968352bb5880cf3c4c546b8072c"
+     },
+     "scheme": "ed25519"
+    },
     "2012c33cdeec3317ee0cbd9de5a4141870ed28a6bd1a59282d2c8b9e4ec30392": {
      "keyid": "2012c33cdeec3317ee0cbd9de5a4141870ed28a6bd1a59282d2c8b9e4ec30392",
      "keytype": "ed25519",
@@ -48,10 +56,21 @@
      ],
      "terminating": false,
      "threshold": 1
+    },
+    {
+     "keyids": [
+      "1d6deff4f7f41f6554e32b6e9ef38fe7374815f06f9d54132b2a6d2d850d294c"
+     ],
+     "name": "demotest",
+     "paths": [
+      "demotest/*"
+     ],
+     "terminating": false,
+     "threshold": 1
     }
    ]
   },
-  "expires": "2022-07-18T11:11:13Z",
+  "expires": "2022-08-23T14:28:27Z",
   "spec_version": "1.0.19",
   "targets": {
    "file1.txt": {
@@ -61,7 +80,7 @@
     "length": 6
    }
   },
-  "version": 6,
+  "version": 7,
   "x-tufrepo-expiry-period": 31449600
  }
 }
