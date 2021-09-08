@@ -25,7 +25,9 @@ jobs:
         run: |
           cd metadata
 
-          tufrepo verify --root-hash 24d9b03f10ce0fe2e648833de26af60a4a8cd4e65bb396a8200a3194ae8ea76e
+          # verify is currently not able to tell e.g. expiry from real invalid metadata
+          # so we can't verify before trying to timestamp
+          #tufrepo verify --root-hash 24d9b03f10ce0fe2e648833de26af60a4a8cd4e65bb396a8200a3194ae8ea76e
           tufrepo edit timestamp touch
           tufrepo verify --root-hash 24d9b03f10ce0fe2e648833de26af60a4a8cd4e65bb396a8200a3194ae8ea76e
 
