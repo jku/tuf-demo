@@ -2,12 +2,12 @@
  "signatures": [
   {
    "keyid": "1d6deff4f7f41f6554e32b6e9ef38fe7374815f06f9d54132b2a6d2d850d294c",
-   "sig": "600dd5d7483f62e415be97af2da7235844e3dca9723e63c112a03e9f67fe827dedcb2f360f01bc793bd27f38b480c0fc4cb6a24df9414a21539227f5a29c0c0c"
+   "sig": "d4974483538bdb234854f7c23414ae2f61d15dc59b1df370ebc580d86dfe3277ae7a1c90136c710cae2c8607426c433ef70f06ad910dc8950aac20db33030501"
   }
  ],
  "signed": {
   "_type": "targets",
-  "expires": "2031-08-13T15:58:32Z",
+  "expires": "2031-08-28T11:37:15Z",
   "spec_version": "1.0.19",
   "targets": {
    "demotest/file": {
@@ -15,9 +15,15 @@
      "sha256": "b425671eaa62f314af8150466cfe7bdda38547f97956359a2268598a25dcfc8f"
     },
     "length": 9
+   },
+   "demotest/hellofile": {
+    "hashes": {
+     "sha256": "e8dcfb95df57bba1a690779a28649489a927a58a44ad1ae83b579460b6e9e340"
+    },
+    "length": 9
    }
   },
-  "version": 3,
+  "version": 4,
   "x-tufrepo-expiry-period": 314496000
  }
 }
