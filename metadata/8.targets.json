@@ -2,7 +2,7 @@
  "signatures": [
   {
    "keyid": "8f3c2794f24426014fc26adcbb8efd94411fce881fa60fc8725a899115750efa",
-   "sig": "e1b54c09c4571b70288079011db0f35656472e83a6b31ef688493fb09ed8890825d4803126aa144948d9475cd65ae83295fdc6d3e41c06e5bbeaa10005d7d40b"
+   "sig": "138b4654efbc4e2a65a1467a9483c22ece39752d15ae805ca754c9f5b05a5169204d7d3ba5a230016f35bbfdb529259677cd35cc8b36e0be54c5eeba6eabd509"
   }
  ],
  "signed": {
@@ -30,6 +30,14 @@
      "keytype": "ed25519",
      "keyval": {
       "public": "3c8fcec25fb3a529fa99f9ce41c10558cc0c8fff52b54ae840201ae65564e222"
+     },
+     "scheme": "ed25519"
+    },
+    "72887b3639e7947da983273494bb0f826cc975ef85f3380a4665f45bf247e5ab": {
+     "keyid": "72887b3639e7947da983273494bb0f826cc975ef85f3380a4665f45bf247e5ab",
+     "keytype": "ed25519",
+     "keyval": {
+      "public": "2d9a5e28ed97371a342db1e082f6c3fa983db6335b8443aeeaec28a35f821c9e"
      },
      "scheme": "ed25519"
     }
@@ -67,10 +75,21 @@
      ],
      "terminating": false,
      "threshold": 1
+    },
+    {
+     "keyids": [
+      "72887b3639e7947da983273494bb0f826cc975ef85f3380a4665f45bf247e5ab"
+     ],
+     "name": "demo",
+     "paths": [
+      "demo/*"
+     ],
+     "terminating": false,
+     "threshold": 1
     }
    ]
   },
-  "expires": "2022-08-23T14:28:27Z",
+  "expires": "2022-09-21T13:47:58Z",
   "spec_version": "1.0.19",
   "targets": {
    "file1.txt": {
@@ -80,7 +99,7 @@
     "length": 6
    }
   },
-  "version": 7,
+  "version": 8,
   "x-tufrepo-expiry-period": 31449600
  }
 }
