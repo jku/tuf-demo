@@ -17,11 +17,9 @@ curl -o /tmp/metadata/root.json https://raw.githubusercontent.com/jku/tuf-repo-t
 
 ```python
 from tuf.ngclient import Updater
-updater = Updater(
-    "/tmp/metadata/",
-    "https://raw.githubusercontent.com/jku/tuf-repo-test/master/metadata/",
-    "https://raw.githubusercontent.com/jku/tuf-repo-test/master/targets/"
-)
+
+url = "https://raw.githubusercontent.com/jku/tuf-repo-test/master"
+updater = Updater("/tmp/metadata/", f"{url}/metadata/", f"{url}/targets/")
 updater.refresh()
 # /tmp/metadata now has current top-level metadata
 ```
