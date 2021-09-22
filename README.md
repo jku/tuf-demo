@@ -6,3 +6,22 @@ This is a demo of [TUF](https://theupdateframework.io/) repository automation us
  * Snapshot updates happen as an action after every push (if needed)
 
 In practice developers can edit and sign targets with appropriate keys _without having access to snapshot and timestamp keys_, push their changes, and the automation will update the snapshot so the repository is valid.
+
+TUF clients can access the repository right from GitHub using the raw content URLs:
+
+```bash
+# Trust-on-first-use: Download initial root metadata
+mkdir /tmp/metadata/
+curl -o /tmp/metadata/root.json https://raw.githubusercontent.com/jku/tuf-repo-test/master/metadata/1.root.json
+```
+
+```python
+from tuf.ngclient import Updater
+updater = Updater(
+    "/tmp/metadata/",
+    "https://raw.githubusercontent.com/jku/tuf-repo-test/master/metadata/",
+    "https://raw.githubusercontent.com/jku/tuf-repo-test/master/targets/"
+)
+updater.refresh()
+# /tmp/metadata now has current top-level metadata
+```
