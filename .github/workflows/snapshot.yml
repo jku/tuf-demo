@@ -18,7 +18,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install git+https://github.com/theupdateframework/tuf.git
           pip install git+https://github.com/vmware-labs/repository-editor-for-tuf.git
 
       - name: Run tufrepo snapshot
