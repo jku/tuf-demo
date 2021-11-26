@@ -23,6 +23,8 @@ jobs:
         env:
           TUF_REPO_PRIVATE_KEY_38600820f11a5f7d7ff42e6dfc9b03fd60272a3be6f895da2d882cea8bb1e20f: ${{ secrets.TUF_REPO_PRIVATE_KEY_38600820f11a5f7d7ff42e6dfc9b03fd60272a3be6f895da2d882cea8bb1e20f }}
         run: |
+          echo "Fail to test notification system...."
+          exit 1
           # verify is currently not able to tell e.g. expiry from real invalid metadata
           # so we can't verify before trying to timestamp
           #tufrepo verify --root-hash 24d9b03f10ce0fe2e648833de26af60a4a8cd4e65bb396a8200a3194ae8ea76e
