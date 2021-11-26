@@ -38,3 +38,24 @@ jobs:
           git commit -a -m "Repository timestamp"
           git show
           git push
+
+      - name: File an issue on timestamp failure
+        if: ${{ failure() }}
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const repo = context.repo.owner + "/" + context.repo.repo
+            const issues = await github.rest.search.issuesAndPullRequests({
+              q: "Timestamp+failed+in:title+state:open+type:issue+repo:" + repo,
+            })
+            if (issues.data.total_count > 0) {
+              console.log("Timestamp failed but an issue exists already.")
+            } else {
+              console.log("Timestamp failed. Creating a new issue...")
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: "Timestamp cron job failed",
+                body: "Timestamp cron job just failed. Have you tried turning it off and on again?"
+              })
+            }
