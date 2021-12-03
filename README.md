@@ -22,10 +22,11 @@ from tuf.ngclient import Updater
 url = "https://jku.github.io/tuf-demo/"
 metadata_dir = "/tmp/tuf-demo/"
 
-# Trust-on-first-use: Download initial root metadata
-os.makedirs(metadata_dir, exist_ok=True)
-with open(f"{metadata_dir}/root.json", "wb") as f:
-    f.write(requests.get(f"{url}/metadata/1.root.json").content)
+# Trust-on-first-use: Download initial root metadata if it's not available
+if not os.path.exists(f"{metadata_dir}/root.json"):
+    os.makedirs(metadata_dir, exist_ok=True)
+    with open(f"{metadata_dir}/root.json", "wb") as f:
+        f.write(requests.get(f"{url}/metadata/1.root.json").content)
 
 # Download file1.txt securely using python-tuf
 updater = Updater(
