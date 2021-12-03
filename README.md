@@ -35,7 +35,7 @@ updater = Updater(
     target_dir="./",
     target_base_url=f"{url}/targets/"
 )
-
+updater.refresh()
 info = updater.get_targetinfo("file1.txt")
 if info is None:
     print("file1.txt not found")
