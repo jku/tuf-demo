@@ -14,24 +14,27 @@ automation will update the snapshot so the repository is valid.
 TUF clients can access the repository deployed in
 https://jku.github.io/tuf-demo:
 
-```bash
-# Trust-on-first-use: Download initial root metadata
-mkdir /tmp/metadata/
-curl -o /tmp/metadata/root.json https://jku.github.io/tuf-demo/metadata/1.root.json
-```
-
 ```python
+import os
+import requests
 from tuf.ngclient import Updater
 
 url = "https://jku.github.io/tuf-demo/"
+metadata_dir = "/tmp/tuf-demo/"
+
+# Trust-on-first-use: Download initial root metadata
+os.makedirs(metadata_dir, exist_ok=True)
+with open(f"{metadata_dir}/root.json", "wb") as f:
+    f.write(requests.get(f"{url}/metadata/1.root.json").content)
+
+# Download file1.txt securely using python-tuf
 updater = Updater(
-    repository_dir="/tmp/metadata/",
+    repository_dir=metadata_dir,
     metadata_base_url=f"{url}/metadata/",
     target_dir="./",
     target_base_url=f"{url}/targets/"
 )
 
-# Download file1.txt securely
 info = updater.get_targetinfo("file1.txt")
 if info is None:
     print("file1.txt not found")
