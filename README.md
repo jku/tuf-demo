@@ -22,8 +22,8 @@ from tuf.ngclient import Updater
 url = "https://jku.github.io/tuf-demo/"
 metadata_dir = "/tmp/tuf-demo/"
 
-# Trust-on-first-use: Download initial root metadata if it's not available
 if not os.path.exists(f"{metadata_dir}/root.json"):
+    # Trust-on-first-use: Download initial root metadata if it's not available
     os.makedirs(metadata_dir, exist_ok=True)
     with open(f"{metadata_dir}/root.json", "wb") as f:
         f.write(requests.get(f"{url}/metadata/1.root.json").content)
