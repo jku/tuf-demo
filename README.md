@@ -1,7 +1,7 @@
 # TUF repository automation demo
 
 This is a demo of [TUF](https://theupdateframework.io/) repository automation
-using [tufrepo](https://github.com/vmware-labs/repository-editor-for-tuf) and
+using [repository-editor-for-tuf](https://github.com/vmware-labs/repository-editor-for-tuf) and
 Github Actions:
  * snapshot and timestamp keys are stored in Github Secrets
  * Timestamp updates happen as cron action
