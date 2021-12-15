@@ -30,12 +30,11 @@ if not os.path.exists(f"{metadata_dir}/root.json"):
 
 # Download file1.txt securely using python-tuf
 updater = Updater(
-    repository_dir=metadata_dir,
+    metadata_dir=metadata_dir,
     metadata_base_url=f"{url}/metadata/",
     target_dir="./",
     target_base_url=f"{url}/targets/"
 )
-updater.refresh()
 info = updater.get_targetinfo("file1.txt")
 if info is None:
     print("file1.txt not found")
