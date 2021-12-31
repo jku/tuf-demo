@@ -2,19 +2,19 @@
  "signatures": [
   {
    "keyid": "38600820f11a5f7d7ff42e6dfc9b03fd60272a3be6f895da2d882cea8bb1e20f",
-   "sig": "3412b0d53159dc9d384c05e396f4114eba3a610f9066a47678b8c900f0ccb899bbc821b0e737e9c60fe7d3a6be13003cbe7433af87d7210eeceb130347aada06"
+   "sig": "f47ace0f010d4efe7c4160b7b85128e1705a2d43a1efa523ed1e3468e1ebddff86384dfbd42cc19a47046d2da928068b8cbf9b60cdbf60c4ae14e45aa1cd1404"
   }
  ],
  "signed": {
   "_type": "timestamp",
-  "expires": "2022-01-01T06:44:24Z",
+  "expires": "2022-01-01T18:42:14Z",
   "meta": {
    "snapshot.json": {
     "version": 20
    }
   },
   "spec_version": "1.0.19",
-  "version": 341,
+  "version": 342,
   "x-tufrepo-expiry-period": 86400
  }
 }
