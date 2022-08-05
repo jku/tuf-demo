@@ -15,15 +15,17 @@ TUF clients can access the repository deployed in
 https://jku.github.io/tuf-demo:
 
 ```python
-import os
-import requests
+import os, requests, sys
 from tuf.ngclient import Updater
 
 url = "https://jku.github.io/tuf-demo/"
 metadata_dir = "/tmp/tuf-demo/"
 
+if len (sys.argv) != 2:
+    sys.exit(f"Usage:  {sys.argv[0]} <targetpath>")
+
+# Trust-on-first-use: Download initial root metadata if it's not available
 if not os.path.exists(f"{metadata_dir}/root.json"):
-    # Trust-on-first-use: Download initial root metadata if it's not available
     os.makedirs(metadata_dir, exist_ok=True)
     with open(f"{metadata_dir}/root.json", "wb") as f:
         f.write(requests.get(f"{url}/metadata/1.root.json").content)
@@ -35,9 +37,12 @@ updater = Updater(
     target_dir="./",
     target_base_url=f"{url}/targets/"
 )
-info = updater.get_targetinfo("file1.txt")
+info = updater.get_targetinfo(sys.argv[1])
 if info is None:
-    print("file1.txt not found")
-elif not updater.find_cached_target(info):
+    print(f"'{sys.argv[1]}' not found")
+elif updater.find_cached_target(info):
+    print(f"'{sys.argv[1]}' is already up-to-date")
+else:
     updater.download_target(info)
+    print(f"'{sys.argv[1]}' downloaded")
 ```
