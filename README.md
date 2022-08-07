@@ -15,6 +15,9 @@ TUF clients can access the repository deployed in
 https://jku.github.io/tuf-demo:
 
 ```python
+# Example client for https://jku.github.io/tuf-demo repository
+# Usage example:  ./client.py file1.txt
+
 import os, requests, sys
 from tuf.ngclient import Updater
 
@@ -30,7 +33,7 @@ if not os.path.exists(f"{metadata_dir}/root.json"):
     with open(f"{metadata_dir}/root.json", "wb") as f:
         f.write(requests.get(f"{url}/metadata/1.root.json").content)
 
-# Download file1.txt securely using python-tuf
+# Download target securely using python-tuf
 updater = Updater(
     metadata_dir=metadata_dir,
     metadata_base_url=f"{url}/metadata/",
@@ -38,11 +41,15 @@ updater = Updater(
     target_base_url=f"{url}/targets/"
 )
 info = updater.get_targetinfo(sys.argv[1])
-if info is None:
+if not info:
     print(f"'{sys.argv[1]}' not found")
-elif updater.find_cached_target(info):
-    print(f"'{sys.argv[1]}' is already up-to-date")
-else:
-    updater.download_target(info)
-    print(f"'{sys.argv[1]}' downloaded")
+    sys.exit()
+
+path = updater.find_cached_target(info)
+if path:
+    print(f"'{path}' is already up-to-date")
+    sys.exit()
+
+path = updater.download_target(info)
+print(f"Downloaded '{path}'")
 ```
