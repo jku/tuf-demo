@@ -1,0 +1,18 @@
+{
+ "signatures": [],
+ "signed": {
+  "_type": "targets",
+  "expires": "2023-08-08T20:56:58Z",
+  "spec_version": "1.0.30",
+  "targets": {
+   "demo/succinctly-delegated-11.txt": {
+    "hashes": {
+     "sha256": "179e440b191139818ab68c5972cbd7ecf4233c2dc68707fbc23411c3f8fa42de"
+    },
+    "length": 32
+   }
+  },
+  "version": 2,
+  "x-tufrepo-expiry-period": 31536000
+ }
+}
