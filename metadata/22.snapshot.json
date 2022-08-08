@@ -1,0 +1,128 @@
+{
+ "signatures": [
+  {
+   "keyid": "9d78543b508f99a95a3c31fad3cffef0644134f1a028b30501acc12058c7c3e8",
+   "sig": "42ab353b63e61844b781427843968b137cc9245d5dc00d5a6734aad431d1ae3fb7be305e6184c4a636fce686a543e7f32d962dd6fee538fa972df8967c0cb504"
+  }
+ ],
+ "signed": {
+  "_type": "snapshot",
+  "expires": "2023-08-07T18:46:54Z",
+  "meta": {
+   "badgers.json": {
+    "version": 2
+   },
+   "demo-bin-00.json": {
+    "version": 2
+   },
+   "demo-bin-01.json": {
+    "version": 1
+   },
+   "demo-bin-02.json": {
+    "version": 1
+   },
+   "demo-bin-03.json": {
+    "version": 1
+   },
+   "demo-bin-04.json": {
+    "version": 1
+   },
+   "demo-bin-05.json": {
+    "version": 1
+   },
+   "demo-bin-06.json": {
+    "version": 2
+   },
+   "demo-bin-07.json": {
+    "version": 1
+   },
+   "demo-bin-08.json": {
+    "version": 1
+   },
+   "demo-bin-09.json": {
+    "version": 2
+   },
+   "demo-bin-0a.json": {
+    "version": 1
+   },
+   "demo-bin-0b.json": {
+    "version": 2
+   },
+   "demo-bin-0c.json": {
+    "version": 2
+   },
+   "demo-bin-0d.json": {
+    "version": 1
+   },
+   "demo-bin-0e.json": {
+    "version": 1
+   },
+   "demo-bin-0f.json": {
+    "version": 1
+   },
+   "demo-bin-10.json": {
+    "version": 1
+   },
+   "demo-bin-11.json": {
+    "version": 1
+   },
+   "demo-bin-12.json": {
+    "version": 2
+   },
+   "demo-bin-13.json": {
+    "version": 1
+   },
+   "demo-bin-14.json": {
+    "version": 1
+   },
+   "demo-bin-15.json": {
+    "version": 1
+   },
+   "demo-bin-16.json": {
+    "version": 1
+   },
+   "demo-bin-17.json": {
+    "version": 1
+   },
+   "demo-bin-18.json": {
+    "version": 2
+   },
+   "demo-bin-19.json": {
+    "version": 1
+   },
+   "demo-bin-1a.json": {
+    "version": 1
+   },
+   "demo-bin-1b.json": {
+    "version": 1
+   },
+   "demo-bin-1c.json": {
+    "version": 1
+   },
+   "demo-bin-1d.json": {
+    "version": 1
+   },
+   "demo-bin-1e.json": {
+    "version": 2
+   },
+   "demo-bin-1f.json": {
+    "version": 1
+   },
+   "demo.json": {
+    "version": 2
+   },
+   "demotest.json": {
+    "version": 4
+   },
+   "role1.json": {
+    "version": 7
+   },
+   "targets.json": {
+    "version": 10
+   }
+  },
+  "spec_version": "1.0.19",
+  "version": 22,
+  "x-tufrepo-expiry-period": 31449600
+ }
+}
