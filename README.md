@@ -6,6 +6,7 @@ Github Actions:
  * snapshot and timestamp keys are stored in Github Secrets
  * Timestamp updates happen as cron action
  * Snapshot updates happen as an action after every push (if needed)
+ * During the snapshot update, any available targets keys will be used to sign targets metadata
 
 In practice developers can edit and sign targets with appropriate keys _without
 having access to snapshot and timestamp keys_, push their changes, and the
