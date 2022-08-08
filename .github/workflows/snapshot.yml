@@ -20,6 +20,13 @@ jobs:
         run: |
           pip install git+https://github.com/vmware-labs/repository-editor-for-tuf.git
 
+      - name: Sign targets
+        working-directory: metadata
+        env:
+          TUF_REPO_PRIVATE_KEY_fb8a7fd2030a0d991af8855dc6093eb3029fee110f73abc63ee94e87ad50b2c2: ${{ secrets.TUF_REPO_PRIVATE_KEY_fb8a7fd2030a0d991af8855dc6093eb3029fee110f73abc63ee94e87ad50b2c2 }}
+        run: |
+          tufrepo --keyring=env sign --all-targets
+
       - name: Snapshot
         id: snapshot
         working-directory: metadata
