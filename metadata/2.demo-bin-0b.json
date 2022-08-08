@@ -1,0 +1,23 @@
+{
+ "signatures": [
+  {
+   "keyid": "fb8a7fd2030a0d991af8855dc6093eb3029fee110f73abc63ee94e87ad50b2c2",
+   "sig": "3a43e1f9273756863e9e53171370c28033373cf64828c1573492e3669069e8c964f8557e32cc1e597cd314be2fd89ba4c01510bdca70042320265e88f74ab60c"
+  }
+ ],
+ "signed": {
+  "_type": "targets",
+  "expires": "2023-08-08T18:40:09Z",
+  "spec_version": "1.0.30",
+  "targets": {
+   "demo/succinctly-delegated-7.txt": {
+    "hashes": {
+     "sha256": "eeed765db6d4c67580da0023c7d21f0bff568619d7c20fe80b83dca62138ac2c"
+    },
+    "length": 31
+   }
+  },
+  "version": 2,
+  "x-tufrepo-expiry-period": 31536000
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "signatures": [
+  {
+   "keyid": "fb8a7fd2030a0d991af8855dc6093eb3029fee110f73abc63ee94e87ad50b2c2",
+   "sig": "4c344bfbceb579a9cdc0dc02d92153fda88bbd982d142b959fa7054c6d6bc7e2b456ba08faf42ef3ff6dbd62b0cf0acda4be804e84648ea644d893a38726da04"
+  }
+ ],
+ "signed": {
+  "_type": "targets",
+  "expires": "2023-08-08T18:40:10Z",
+  "spec_version": "1.0.30",
+  "targets": {
+   "demo/succinctly-delegated-2.txt": {
+    "hashes": {
+     "sha256": "3dd13c5f9705611892ddcd3ec25c968595e7180bed15018abbdf08c1fd0955c9"
+    },
+    "length": 31
+   },
+   "demo/succinctly-delegated-8.txt": {
+    "hashes": {
+     "sha256": "4f6d413c6b9cf2c957c818d8e9266b10892e845f202c3d50bc88b8e886ec58b0"
+    },
+    "length": 31
+   }
+  },
+  "version": 2,
+  "x-tufrepo-expiry-period": 31536000
+ }
+}
