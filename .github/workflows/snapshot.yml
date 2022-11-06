@@ -38,7 +38,7 @@ jobs:
           # verify that result is a functional repository
           tufrepo verify --root-hash 24d9b03f10ce0fe2e648833de26af60a4a8cd4e65bb396a8200a3194ae8ea76e 
           # only set variable to true if we really did something
-          git diff --quiet ||  echo "::set-output name=snapshot::true"
+          git diff --quiet ||  echo "snapshot=true" >> $GITHUB_OUTPUT
 
       - name: Commit snapshot
         working-directory: metadata
