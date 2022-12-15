@@ -1,13 +1,13 @@
 {
  "signatures": [
   {
-   "keyid": "9d78543b508f99a95a3c31fad3cffef0644134f1a028b30501acc12058c7c3e8",
-   "sig": "f2b0131226af1ee9867d0a6a3953243ea2a8130fef019429460bf0700dbd600c31741f3420f9b8c6c534261c25a3d36a9a060e3813353db3ebede2779e8e6b0b"
+   "keyid": "84db929f111456a5706a89b13162a04dd59b06c692973af624e31ae71718d2b2",
+   "sig": "304502205e0503534f81471749885f2fbd2f13e4252ade257e4454725f407c2280775d5b022100c2b0afc09d38a1bb2c6bb054091eec73904812b8eb20d94fa3df9cd829850702"
   }
  ],
  "signed": {
   "_type": "snapshot",
-  "expires": "2023-08-07T21:01:29Z",
+  "expires": "2023-12-14T13:59:21Z",
   "meta": {
    "badgers.json": {
     "version": 2
@@ -118,11 +118,11 @@
     "version": 7
    },
    "targets.json": {
-    "version": 10
+    "version": 11
    }
   },
   "spec_version": "1.0.19",
-  "version": 23,
+  "version": 24,
   "x-tufrepo-expiry-period": 31449600
  }
 }
