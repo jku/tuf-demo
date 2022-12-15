@@ -1,0 +1,6 @@
+# these are needed while signer stuff is not merged
+git+https://github.com/jku/securesystemslib.git@gcp-import#securesystemslib[pynacl,gcpkms]
+git+https://github.com/jku/python-tuf@no-key
+
+# Use repository editor from git since there are no releases:
+git+https://github.com/vmware-labs/repository-editor-for-tuf.git
