@@ -3,7 +3,7 @@
 This is a demo of [TUF](https://theupdateframework.io/) repository automation
 using [repository-editor-for-tuf](https://github.com/vmware-labs/repository-editor-for-tuf) and
 Github Actions:
- * snapshot and timestamp keys are stored in Github Secrets
+ * snapshot and timestamp keys are stored in Google Cloud KMS
  * Timestamp updates happen as cron action
  * Snapshot updates happen as an action after every push (if needed)
  * During the snapshot update, any available targets keys will be used to sign targets metadata
