@@ -27,7 +27,7 @@ jobs:
         uses: google-github-actions/auth@ef5d53e30bbcd8d0836f4288f5e50ff3e086997d
         with:
           token_format: access_token
-          workload_identity_provider: projects/843741030650/locations/global/workloadIdentityPools/tufdemo/providers/tufdemo
+          workload_identity_provider: projects/843741030650/locations/global/workloadIdentityPools/tuf-demo/providers/tuf-demo
           service_account: tufdemo@python-tuf-kms.iam.gserviceaccount.com
 
       - name: Timestamp
