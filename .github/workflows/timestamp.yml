@@ -32,8 +32,6 @@ jobs:
 
       - name: Timestamp
         working-directory: metadata
-        env:
-          TUF_REPO_PRIVATE_KEY_38600820f11a5f7d7ff42e6dfc9b03fd60272a3be6f895da2d882cea8bb1e20f: ${{ secrets.TUF_REPO_PRIVATE_KEY_38600820f11a5f7d7ff42e6dfc9b03fd60272a3be6f895da2d882cea8bb1e20f }}
         run: |
           # verify is currently not able to tell e.g. expiry from real invalid metadata
           # so we can't verify before trying to timestamp

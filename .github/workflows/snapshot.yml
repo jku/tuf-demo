@@ -38,14 +38,11 @@ jobs:
         env:
           TUF_REPO_PRIVATE_KEY_fb8a7fd2030a0d991af8855dc6093eb3029fee110f73abc63ee94e87ad50b2c2: ${{ secrets.TUF_REPO_PRIVATE_KEY_fb8a7fd2030a0d991af8855dc6093eb3029fee110f73abc63ee94e87ad50b2c2 }}
         run: |
-          tufrepo --keyring=env sign --all-targets
+          tufrepo --keyring=uri sign --all-targets
 
       - name: Snapshot
         id: snapshot
         working-directory: metadata
-        env:
-          TUF_REPO_PRIVATE_KEY_38600820f11a5f7d7ff42e6dfc9b03fd60272a3be6f895da2d882cea8bb1e20f: ${{ secrets.TUF_REPO_PRIVATE_KEY_38600820f11a5f7d7ff42e6dfc9b03fd60272a3be6f895da2d882cea8bb1e20f }}
-          TUF_REPO_PRIVATE_KEY_9d78543b508f99a95a3c31fad3cffef0644134f1a028b30501acc12058c7c3e8: ${{ secrets.TUF_REPO_PRIVATE_KEY_9d78543b508f99a95a3c31fad3cffef0644134f1a028b30501acc12058c7c3e8 }}
         run: |
           tufrepo --keyring=uri snapshot
           # verify that result is a functional repository
