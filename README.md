@@ -1,5 +1,6 @@
 # TUF repository automation demo
 
+
 This is a demo of [TUF](https://theupdateframework.io/) repository automation
 using [repository-editor-for-tuf](https://github.com/vmware-labs/repository-editor-for-tuf) and
 Github Actions:
