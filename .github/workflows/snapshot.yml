@@ -27,7 +27,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Authenticate to Google Cloud
-        uses: google-github-actions/auth@ef5d53e30bbcd8d0836f4288f5e50ff3e086997d
+        uses: google-github-actions/auth@35b0e87d162680511bf346c299f71c9c5c379033
         with:
           token_format: access_token
           workload_identity_provider: projects/843741030650/locations/global/workloadIdentityPools/tuf-demo/providers/tuf-demo
