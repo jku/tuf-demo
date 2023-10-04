@@ -1,0 +1,79 @@
+{
+ "signatures": [
+  {
+   "keyid": "762cb22caca65de5e9b7b6baecb84ca989d337280ce6914b6440aea95769ad93",
+   "sig": "30440220103e5cfa2fe5a08d526f5c5d1c530685276259e75dffa65dbdba5af73044f2c2022076894876214710f9a160f6df520ab5beeccd31d268d389aec4b3d7e2aff03dd8"
+  },
+  {
+   "keyid": "8da4516e743da10f431b41e37bad5b706efe8e29122c86dbcf849521a815b8c9",
+   "sig": "30460221009d2aa6400210b1c505d7efa1693b8bb806454fd0b0a29a7b164b7631a1ded88b022100e53d778886a392a8bae9f04494c79e3cdaa24386922aa4494fec7d9b6fbd0bba"
+  }
+ ],
+ "signed": {
+  "_type": "root",
+  "consistent_snapshot": true,
+  "expires": "2024-10-03T11:39:18Z",
+  "keys": {
+   "762cb22caca65de5e9b7b6baecb84ca989d337280ce6914b6440aea95769ad93": {
+    "keytype": "ecdsa",
+    "keyval": {
+     "public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEohqIdE+yTl4OxpX8ZxNUPrg3SL9H\nBDnhZuceKkxy2oMhUOxhWweZeG3bfM1T4ZLnJimC6CAYVU5+F5jZCoftRw==\n-----END PUBLIC KEY-----\n"
+    },
+    "scheme": "ecdsa-sha2-nistp256",
+    "x-tuf-on-ci-keyowner": "@jku"
+   },
+   "8da4516e743da10f431b41e37bad5b706efe8e29122c86dbcf849521a815b8c9": {
+    "keytype": "ecdsa",
+    "keyval": {
+     "public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEeiu8or2aUi7VFURrhwsBecHjIAgP\nn7THYn9t7ZnYbngEsljbm4yKAjh8gXjC3aC0bM1ZQABRybhMgkti6wAu5w==\n-----END PUBLIC KEY-----\n"
+    },
+    "scheme": "ecdsa-sha2-nistp256",
+    "x-tuf-on-ci-keyowner": "@rdimitrov"
+   },
+   "b4aa17c5338aeaa2d5ed7171bcd8ae9408b10a612646e7aa95095744f3935f4b": {
+    "keytype": "ecdsa",
+    "keyval": {
+     "public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEubipV7jF5M1Mf4IA8nozDcb5mnBV\nlzVJrixx1AvqIRQ1BQeFHn+9/Dn8h2ZVmsOSDje9sLGjYMvfZ/VGeY3frQ==\n-----END PUBLIC KEY-----\n"
+    },
+    "scheme": "ecdsa-sha2-nistp256",
+    "x-tuf-on-ci-online-uri": "gcpkms:projects/python-tuf-kms/locations/global/keyRings/tuf-demo/cryptoKeys/snapshot/cryptoKeyVersions/1"
+   }
+  },
+  "roles": {
+   "root": {
+    "keyids": [
+     "762cb22caca65de5e9b7b6baecb84ca989d337280ce6914b6440aea95769ad93",
+     "8da4516e743da10f431b41e37bad5b706efe8e29122c86dbcf849521a815b8c9"
+    ],
+    "threshold": 1
+   },
+   "snapshot": {
+    "keyids": [
+     "b4aa17c5338aeaa2d5ed7171bcd8ae9408b10a612646e7aa95095744f3935f4b"
+    ],
+    "threshold": 1,
+    "x-tuf-on-ci-expiry-period": 365,
+    "x-tuf-on-ci-signing-period": 60
+   },
+   "targets": {
+    "keyids": [
+     "762cb22caca65de5e9b7b6baecb84ca989d337280ce6914b6440aea95769ad93",
+     "8da4516e743da10f431b41e37bad5b706efe8e29122c86dbcf849521a815b8c9"
+    ],
+    "threshold": 1
+   },
+   "timestamp": {
+    "keyids": [
+     "b4aa17c5338aeaa2d5ed7171bcd8ae9408b10a612646e7aa95095744f3935f4b"
+    ],
+    "threshold": 1,
+    "x-tuf-on-ci-expiry-period": 2,
+    "x-tuf-on-ci-signing-period": 1
+   }
+  },
+  "spec_version": "1.0.31",
+  "version": 1,
+  "x-tuf-on-ci-expiry-period": 365,
+  "x-tuf-on-ci-signing-period": 60
+ }
+}
