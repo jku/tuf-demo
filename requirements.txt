@@ -1,4 +1,0 @@
-# these are needed while signer stuff is not merged
-securesystemslib[pynacl,gcpkms]
-git+https://github.com/jku/python-tuf@no-key
-git+https://github.com/jku/repository-editor-for-tuf.git@support-gcp-signer

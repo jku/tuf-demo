@@ -1,19 +1,10 @@
 # TUF repository automation demo
 
-This is a demo of [TUF](https://theupdateframework.io/) repository automation
-using [repository-editor-for-tuf](https://github.com/vmware-labs/repository-editor-for-tuf) and
-Github Actions:
- * snapshot and timestamp keys are stored in Google Cloud KMS. One of the delegated targets keys is also online, stored in GitHub secrets
- * Timestamp updates happen as cron action
- * Snapshot updates happen as an action after every push (if needed)
- * During the snapshot update, any available targets keys will be used to sign targets metadata
+This is a live [TUF](https://theupdateframework.io/) repository, intended for
+testing and demonstrations. It's
+maintained with  [TUF-on-CI](https://github.com/theupdateframework/tuf-on-ci).
 
-In practice developers can edit and sign targets with appropriate keys _without
-having access to snapshot and timestamp keys_, push their changes, and the
-automation will update the snapshot so the repository is valid.
-
-TUF clients can access the repository deployed in
-https://jku.github.io/tuf-demo:
+TUF clients can access the repository in https://jku.github.io/tuf-demo:
 
 ```python
 # Example client for https://jku.github.io/tuf-demo repository
