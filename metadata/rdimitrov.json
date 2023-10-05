@@ -1,0 +1,12 @@
+{
+ "signatures": [],
+ "signed": {
+  "_type": "targets",
+  "expires": "2033-10-02T06:59:08Z",
+  "spec_version": "1.0.31",
+  "targets": {},
+  "version": 1,
+  "x-tuf-on-ci-expiry-period": 3650,
+  "x-tuf-on-ci-signing-period": 60
+ }
+}
