@@ -2,19 +2,63 @@
  "signatures": [
   {
    "keyid": "762cb22caca65de5e9b7b6baecb84ca989d337280ce6914b6440aea95769ad93",
-   "sig": "304502204d9a1f286ef2564482f26193ccfb7f3ee125c9bdb5a728c7df3cc3e2039bb5c40221009f0b747ac23a07efe4c6fd9043886cd6a44fa5ef6f2a988d62ff5e2eada836d6"
+   "sig": "304502207738cdc570858920c1a1ea3378b348673b303cf236778db00a6e236595deea8a022100b8ab1d2205637756aa403823b2b362f04fc25595b532426c80b09795f344baa6"
   },
   {
    "keyid": "8da4516e743da10f431b41e37bad5b706efe8e29122c86dbcf849521a815b8c9",
-   "sig": "3044022007c702ef7f6d6ff242341162b271db61476bb63e6e7d6da12d754c31fce2b08002200ba221dc3897080ef0058b4a28bfe3fe48b08101682d41b7050cc1c64cb3deda"
+   "sig": "30450220555ab66cecd5b04194110bd0a3ef123abb4b62caaf3910c9ce0cffc83811b2160221009cf10d228c1bd0b339b856dfcc2958ecedd03087e8aad5e8ab4d5db071120105"
   }
  ],
  "signed": {
   "_type": "targets",
-  "expires": "2024-10-03T11:29:31Z",
+  "delegations": {
+   "keys": {
+    "762cb22caca65de5e9b7b6baecb84ca989d337280ce6914b6440aea95769ad93": {
+     "keytype": "ecdsa",
+     "keyval": {
+      "public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEohqIdE+yTl4OxpX8ZxNUPrg3SL9H\nBDnhZuceKkxy2oMhUOxhWweZeG3bfM1T4ZLnJimC6CAYVU5+F5jZCoftRw==\n-----END PUBLIC KEY-----\n"
+     },
+     "scheme": "ecdsa-sha2-nistp256",
+     "x-tuf-on-ci-keyowner": "@jku"
+    },
+    "8da4516e743da10f431b41e37bad5b706efe8e29122c86dbcf849521a815b8c9": {
+     "keytype": "ecdsa",
+     "keyval": {
+      "public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEeiu8or2aUi7VFURrhwsBecHjIAgP\nn7THYn9t7ZnYbngEsljbm4yKAjh8gXjC3aC0bM1ZQABRybhMgkti6wAu5w==\n-----END PUBLIC KEY-----\n"
+     },
+     "scheme": "ecdsa-sha2-nistp256",
+     "x-tuf-on-ci-keyowner": "@rdimitrov"
+    }
+   },
+   "roles": [
+    {
+     "keyids": [
+      "762cb22caca65de5e9b7b6baecb84ca989d337280ce6914b6440aea95769ad93"
+     ],
+     "name": "jku",
+     "paths": [
+      "jku/*"
+     ],
+     "terminating": true,
+     "threshold": 1
+    },
+    {
+     "keyids": [
+      "8da4516e743da10f431b41e37bad5b706efe8e29122c86dbcf849521a815b8c9"
+     ],
+     "name": "rdimitrov",
+     "paths": [
+      "rdimitrov/*"
+     ],
+     "terminating": true,
+     "threshold": 1
+    }
+   ]
+  },
+  "expires": "2024-10-04T07:05:45Z",
   "spec_version": "1.0.31",
   "targets": {},
-  "version": 1,
+  "version": 2,
   "x-tuf-on-ci-expiry-period": 365,
   "x-tuf-on-ci-signing-period": 60
  }
