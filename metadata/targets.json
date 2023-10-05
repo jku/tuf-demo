@@ -6,7 +6,7 @@
   },
   {
    "keyid": "8da4516e743da10f431b41e37bad5b706efe8e29122c86dbcf849521a815b8c9",
-   "sig": ""
+   "sig": "30450220555ab66cecd5b04194110bd0a3ef123abb4b62caaf3910c9ce0cffc83811b2160221009cf10d228c1bd0b339b856dfcc2958ecedd03087e8aad5e8ab4d5db071120105"
   }
  ],
  "signed": {
@@ -20,6 +20,14 @@
      },
      "scheme": "ecdsa-sha2-nistp256",
      "x-tuf-on-ci-keyowner": "@jku"
+    },
+    "8da4516e743da10f431b41e37bad5b706efe8e29122c86dbcf849521a815b8c9": {
+     "keytype": "ecdsa",
+     "keyval": {
+      "public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEeiu8or2aUi7VFURrhwsBecHjIAgP\nn7THYn9t7ZnYbngEsljbm4yKAjh8gXjC3aC0bM1ZQABRybhMgkti6wAu5w==\n-----END PUBLIC KEY-----\n"
+     },
+     "scheme": "ecdsa-sha2-nistp256",
+     "x-tuf-on-ci-keyowner": "@rdimitrov"
     }
    },
    "roles": [
@@ -35,7 +43,9 @@
      "threshold": 1
     },
     {
-     "keyids": [],
+     "keyids": [
+      "8da4516e743da10f431b41e37bad5b706efe8e29122c86dbcf849521a815b8c9"
+     ],
      "name": "rdimitrov",
      "paths": [
       "rdimitrov/*"
@@ -45,7 +55,7 @@
     }
    ]
   },
-  "expires": "2024-10-04T06:59:08Z",
+  "expires": "2024-10-04T07:05:45Z",
   "spec_version": "1.0.31",
   "targets": {},
   "version": 2,
