@@ -2,15 +2,15 @@
  "signatures": [
   {
    "keyid": "b4aa17c5338aeaa2d5ed7171bcd8ae9408b10a612646e7aa95095744f3935f4b",
-   "sig": "3046022100c1b1107a03085d70110fb3c784b40da12fb64023d52c37c72051552c72cc1fdb022100eee3a163666b1990cd43b5dabbf44076cde5d892b197776256d416efe7872700"
+   "sig": "304402203401740fc5cd6eb80fc5c6537b5bdc5d3f3285c28553bca05cc8a55e0085e5f7022008343a1e014525229a943452b7df9d50d5fbaecf5413d52f9ffa78c9557fe0cc"
   }
  ],
  "signed": {
   "_type": "snapshot",
-  "expires": "2024-10-15T09:17:04Z",
+  "expires": "2025-01-01T09:15:28Z",
   "meta": {
    "jku.json": {
-    "version": 3
+    "version": 4
    },
    "rdimitrov.json": {
     "version": 2
@@ -20,6 +20,6 @@
    }
   },
   "spec_version": "1.0.31",
-  "version": 5
+  "version": 6
  }
 }
