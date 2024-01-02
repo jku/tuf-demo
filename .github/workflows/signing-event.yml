@@ -15,6 +15,10 @@ jobs:
     permissions:
       contents: write # for adding targets changes into the signing event branch
       issues: write
+      actions: write # for dispatching another signing-event workflow
+
     steps:
       - name: Signing event
-        uses: theupdateframework/tuf-on-ci/actions/signing-event@d5496b4dfa28a02eec0d8ac1bb228ea08d3f7c1a # v0.3.0
+        uses: theupdateframework/tuf-on-ci/actions/signing-event@rc-v0.4.0
+        with:
+          token: ${{ secrets.TUF_ON_CI_TOKEN || secrets.GITHUB_TOKEN }}
