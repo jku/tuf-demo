@@ -1,4 +1,4 @@
-name: TUF-on-CI publish to GitHub Pages
+name: TUF-on-CI publish
 
 permissions: {}
 
@@ -16,12 +16,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: build-and-upload-repository
-        uses: theupdateframework/tuf-on-ci/actions/upload-repository@4ae5fdf2b18c6256787df167fce7a0e2d7e7a40e # v0.5.0
+        uses: theupdateframework/tuf-on-ci/actions/upload-repository@38e31ce9aaf106ef0c7332390c5f9882f8cc9e82 # v0.6.0
         with:
           gh_pages: true
           ref: ${{ inputs.ref }}
 
-  deploy:
+  deploy-to-pages:
     permissions:
       pages: write
       id-token: write # for authenticating to GH Pages
@@ -36,20 +36,20 @@ jobs:
         uses: actions/deploy-pages@decdde0ac072f6dcbe43649d82d9c635fff5b4e4 # v4.0.4
 
   test-deployed-repository:
-    needs: deploy
+    needs: deploy-to-pages
     permissions:
       issues: 'write' # for modifying Issues
     uses: ./.github/workflows/test.yml
 
   update-issue:
     runs-on: ubuntu-latest
-    needs: [build, deploy, test-deployed-repository]
+    needs: [build, deploy-to-pages, test-deployed-repository]
     if: always() && !cancelled()
     permissions:
       issues: 'write' # for modifying Issues
     steps:
       - name: Update the issue for the workflow
-        uses: theupdateframework/tuf-on-ci/actions/update-issue@4ae5fdf2b18c6256787df167fce7a0e2d7e7a40e # v0.5.0
+        uses: theupdateframework/tuf-on-ci/actions/update-issue@38e31ce9aaf106ef0c7332390c5f9882f8cc9e82 # v0.6.0
         with:
           token: ${{ secrets.TUF_ON_CI_TOKEN || secrets.GITHUB_TOKEN }}
           success: ${{ !contains(needs.*.result, 'failure') }}
