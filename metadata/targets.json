@@ -2,11 +2,11 @@
  "signatures": [
   {
    "keyid": "762cb22caca65de5e9b7b6baecb84ca989d337280ce6914b6440aea95769ad93",
-   "sig": "304502207738cdc570858920c1a1ea3378b348673b303cf236778db00a6e236595deea8a022100b8ab1d2205637756aa403823b2b362f04fc25595b532426c80b09795f344baa6"
+   "sig": "30450221009ab9aa278327daf24c3eb0d0f6e0d6f85c42c0654d20aec80778f3717251298e0220454a6457f84d04889cd54e5a326c79496de38b4c2432152cdd905bbca94de1f0"
   },
   {
    "keyid": "8da4516e743da10f431b41e37bad5b706efe8e29122c86dbcf849521a815b8c9",
-   "sig": "30450220555ab66cecd5b04194110bd0a3ef123abb4b62caaf3910c9ce0cffc83811b2160221009cf10d228c1bd0b339b856dfcc2958ecedd03087e8aad5e8ab4d5db071120105"
+   "sig": "304502204eeb84b99430e3e8ada62b51363464dae1d94aa24b6cc587960c2e0c3158ca13022100f4d0ee00da61fc3645acd2de43ec2aa2f1cdc06469d9ebc56ba1b34b569b9036"
   }
  ],
  "signed": {
@@ -55,10 +55,17 @@
     }
    ]
   },
-  "expires": "2024-10-04T07:05:45Z",
+  "expires": "2025-02-19T09:05:41Z",
   "spec_version": "1.0.31",
-  "targets": {},
-  "version": 2,
+  "targets": {
+   "file1.txt": {
+    "hashes": {
+     "sha256": "fc4b5fd6816f75a7c81fc8eaa9499d6a299bd803397166e8c4cf9280b801d62c"
+    },
+    "length": 5
+   }
+  },
+  "version": 3,
   "x-tuf-on-ci-expiry-period": 365,
   "x-tuf-on-ci-signing-period": 60
  }
