@@ -28,6 +28,14 @@
      },
      "scheme": "ecdsa-sha2-nistp256",
      "x-tuf-on-ci-keyowner": "@rdimitrov"
+    },
+    "d7d2d47a3f644fc3a685bac7b39c81ed9f9cee48ff861b44fbd86b91e34e7829": {
+     "keytype": "ecdsa",
+     "keyval": {
+      "public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE++Wv+DcLRk+mfkmlpCwl1GUi9EMh\npBUTz8K0fH7bE4mQuViGSyWA/eyMc0HvzZi6Xr0diHw0/lUPBvok214YQw==\n-----END PUBLIC KEY-----\n"
+     },
+     "scheme": "ecdsa-sha2-nistp256",
+     "x-tuf-on-ci-keyowner": "@kommendorkapten"
     }
    },
    "roles": [
@@ -54,7 +62,9 @@
      "threshold": 1
     },
     {
-     "keyids": [],
+     "keyids": [
+      "d7d2d47a3f644fc3a685bac7b39c81ed9f9cee48ff861b44fbd86b91e34e7829"
+     ],
      "name": "kommendorkapten",
      "paths": [
       "kommendorkapten/*"
@@ -64,7 +74,7 @@
     }
    ]
   },
-  "expires": "2025-03-04T10:31:05Z",
+  "expires": "2025-03-04T11:14:05Z",
   "spec_version": "1.0.31",
   "targets": {
    "file1.txt": {
