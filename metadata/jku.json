@@ -2,12 +2,12 @@
  "signatures": [
   {
    "keyid": "762cb22caca65de5e9b7b6baecb84ca989d337280ce6914b6440aea95769ad93",
-   "sig": "3045022100d18e6790ba496293367c27b688c53ba507c71bb3a541128b517ae33c56ba6c5402205d88b1172ae91de98bcc98cafa2fa906df932c4207bf455eb47664d4a790382e"
+   "sig": ""
   }
  ],
  "signed": {
   "_type": "targets",
-  "expires": "2033-12-30T09:10:22Z",
+  "expires": "2034-03-02T08:06:41Z",
   "spec_version": "1.0.31",
   "targets": {
    "jku/README": {
@@ -18,12 +18,12 @@
    },
    "jku/file1": {
     "hashes": {
-     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+     "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
     },
-    "length": 0
+    "length": 2
    }
   },
-  "version": 4,
+  "version": 5,
   "x-tuf-on-ci-expiry-period": 3650,
   "x-tuf-on-ci-signing-period": 60
  }
