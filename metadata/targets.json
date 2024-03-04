@@ -2,11 +2,11 @@
  "signatures": [
   {
    "keyid": "762cb22caca65de5e9b7b6baecb84ca989d337280ce6914b6440aea95769ad93",
-   "sig": "30450221009ab9aa278327daf24c3eb0d0f6e0d6f85c42c0654d20aec80778f3717251298e0220454a6457f84d04889cd54e5a326c79496de38b4c2432152cdd905bbca94de1f0"
+   "sig": "304402207727bf18b7e84203f32ce2bbdffe3fe04ce63fc5f4302e1350240737ced58a520220424a71c11cc484f0b0e43fbbb4ced65f6ad806edd395b0e7b1e93bae888f875a"
   },
   {
    "keyid": "8da4516e743da10f431b41e37bad5b706efe8e29122c86dbcf849521a815b8c9",
-   "sig": "304502204eeb84b99430e3e8ada62b51363464dae1d94aa24b6cc587960c2e0c3158ca13022100f4d0ee00da61fc3645acd2de43ec2aa2f1cdc06469d9ebc56ba1b34b569b9036"
+   "sig": "3044022008b06ba070303ffaf09158c1ff598702a0441de9a3e31831007b752fafe374420220649419cee4c86fd797125c457036f3c32e5b64c2798fcac8e98a4906d8d96064"
   }
  ],
  "signed": {
@@ -28,6 +28,14 @@
      },
      "scheme": "ecdsa-sha2-nistp256",
      "x-tuf-on-ci-keyowner": "@rdimitrov"
+    },
+    "d7d2d47a3f644fc3a685bac7b39c81ed9f9cee48ff861b44fbd86b91e34e7829": {
+     "keytype": "ecdsa",
+     "keyval": {
+      "public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE++Wv+DcLRk+mfkmlpCwl1GUi9EMh\npBUTz8K0fH7bE4mQuViGSyWA/eyMc0HvzZi6Xr0diHw0/lUPBvok214YQw==\n-----END PUBLIC KEY-----\n"
+     },
+     "scheme": "ecdsa-sha2-nistp256",
+     "x-tuf-on-ci-keyowner": "@kommendorkapten"
     }
    },
    "roles": [
@@ -52,10 +60,21 @@
      ],
      "terminating": true,
      "threshold": 1
+    },
+    {
+     "keyids": [
+      "d7d2d47a3f644fc3a685bac7b39c81ed9f9cee48ff861b44fbd86b91e34e7829"
+     ],
+     "name": "kommendorkapten",
+     "paths": [
+      "kommendorkapten/*"
+     ],
+     "terminating": true,
+     "threshold": 1
     }
    ]
   },
-  "expires": "2025-02-19T09:05:41Z",
+  "expires": "2025-03-04T11:28:30Z",
   "spec_version": "1.0.31",
   "targets": {
    "file1.txt": {
@@ -65,7 +84,7 @@
     "length": 5
    }
   },
-  "version": 3,
+  "version": 4,
   "x-tuf-on-ci-expiry-period": 365,
   "x-tuf-on-ci-signing-period": 60
  }
