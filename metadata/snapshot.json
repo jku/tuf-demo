@@ -2,18 +2,18 @@
  "signatures": [
   {
    "keyid": "b4aa17c5338aeaa2d5ed7171bcd8ae9408b10a612646e7aa95095744f3935f4b",
-   "sig": "3045022100e5dd724292e4dea78426b0862b2e3ea1bd1871c99aaf98cd89acc4d62d1f9a82022044cc3f9cf054c45c6a2e239daabd025220bf01ffcf0c875f933f928929bf5d1d"
+   "sig": "3045022100d66ab0dfa72f27168a888915b79a1c29158c18d9d5db92a25742c5964a598fdd02203faebf46cd506e051d01d4bffe00f363f62f6b0e962f803dbcf2350828c8f3c3"
   }
  ],
  "signed": {
   "_type": "snapshot",
-  "expires": "2025-03-04T15:08:37Z",
+  "expires": "2025-03-26T12:09:50Z",
   "meta": {
    "jku.json": {
     "version": 4
    },
    "kommendorkapten.json": {
-    "version": 1
+    "version": 2
    },
    "rdimitrov.json": {
     "version": 2
@@ -23,6 +23,6 @@
    }
   },
   "spec_version": "1.0.31",
-  "version": 8
+  "version": 9
  }
 }
