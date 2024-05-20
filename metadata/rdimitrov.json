@@ -1,13 +1,13 @@
 {
  "signatures": [
   {
-   "keyid": "8da4516e743da10f431b41e37bad5b706efe8e29122c86dbcf849521a815b8c9",
-   "sig": "304402204624667e11ff7908c530adfd586ad2407620b3f67d45087d46d2419bad9cc0b502205fc4926c6a1ceae44d6c6423dd1f878b508eb87766678e6c8b9a037742fb4e11"
+   "keyid": "08af0ce41206baf8cf6b31623780d600f960a49367a9725e2eca4dd041f74a41",
+   "sig": ""
   }
  ],
  "signed": {
   "_type": "targets",
-  "expires": "2033-10-03T11:12:28Z",
+  "expires": "2034-05-18T11:03:36Z",
   "spec_version": "1.0.31",
   "targets": {
    "rdimitrov/artifact-example.md": {
@@ -17,7 +17,7 @@
     "length": 23
    }
   },
-  "version": 2,
+  "version": 3,
   "x-tuf-on-ci-expiry-period": 3650,
   "x-tuf-on-ci-signing-period": 60
  }

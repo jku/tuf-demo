@@ -1,13 +1,13 @@
 {
  "signatures": [
   {
-   "keyid": "d7d2d47a3f644fc3a685bac7b39c81ed9f9cee48ff861b44fbd86b91e34e7829",
-   "sig": "3045022100d686226199d9296fd3b68def0df1a7cca6985e24c80a8da655d6a6671d9e390902200ffc1853cb9f8996282e88106d4019f97f1f673b8e6b8996a059d800c07544eb"
+   "keyid": "61f9609d2655b346fcebccd66b509d5828168d5e447110e261f0bcc8553624bc",
+   "sig": ""
   }
  ],
  "signed": {
   "_type": "targets",
-  "expires": "2034-03-24T09:46:48Z",
+  "expires": "2034-05-18T11:03:36Z",
   "spec_version": "1.0.31",
   "targets": {
    "kommendorkapten/newfile.txt": {
@@ -17,7 +17,7 @@
     "length": 0
    }
   },
-  "version": 2,
+  "version": 3,
   "x-tuf-on-ci-expiry-period": 3650,
   "x-tuf-on-ci-signing-period": 60
  }
