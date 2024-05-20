@@ -2,7 +2,7 @@
  "signatures": [
   {
    "keyid": "aa61e09f6af7662ac686cf0c6364079f63d3e7a86836684eeced93eace3acd81",
-   "sig": "304402201016fca75a94eeda34eab988db90d945b525a9e2bc064660a5023566cee584820220750fae22aa31dfe4f5e7997f44ebd2bab18ed944a48be68ea1516219bfc0cc75"
+   "sig": ""
   },
   {
    "keyid": "08af0ce41206baf8cf6b31623780d600f960a49367a9725e2eca4dd041f74a41",
@@ -52,7 +52,8 @@
     },
     {
      "keyids": [
-      "08af0ce41206baf8cf6b31623780d600f960a49367a9725e2eca4dd041f74a41"
+      "08af0ce41206baf8cf6b31623780d600f960a49367a9725e2eca4dd041f74a41",
+      "aa61e09f6af7662ac686cf0c6364079f63d3e7a86836684eeced93eace3acd81"
      ],
      "name": "rdimitrov",
      "paths": [
@@ -74,7 +75,7 @@
     }
    ]
   },
-  "expires": "2025-05-20T11:03:36Z",
+  "expires": "2025-05-20T11:16:28Z",
   "spec_version": "1.0.31",
   "targets": {
    "file1.txt": {
