@@ -1,28 +1,28 @@
 {
  "signatures": [
   {
-   "keyid": "b4aa17c5338aeaa2d5ed7171bcd8ae9408b10a612646e7aa95095744f3935f4b",
-   "sig": "3045022100d66ab0dfa72f27168a888915b79a1c29158c18d9d5db92a25742c5964a598fdd02203faebf46cd506e051d01d4bffe00f363f62f6b0e962f803dbcf2350828c8f3c3"
+   "keyid": "1bafcc09f6a8a0a0686db7f8b2d5cb4ac41d26ee469905ee348dea6162ea83e6",
+   "sig": "3046022100fd630448f324b36e30194eddd1fbf0141ded265ed21a6df82e3016d3c600478c022100e81b208cf6109127d1dd436f75f0a29910895a1cbeab6c6e14d0adc5fa8a4c9c"
   }
  ],
  "signed": {
   "_type": "snapshot",
-  "expires": "2025-03-26T12:09:50Z",
+  "expires": "2025-05-20T12:09:41Z",
   "meta": {
    "jku.json": {
-    "version": 4
+    "version": 5
    },
    "kommendorkapten.json": {
-    "version": 2
+    "version": 3
    },
    "rdimitrov.json": {
-    "version": 2
+    "version": 3
    },
    "targets.json": {
-    "version": 4
+    "version": 5
    }
   },
   "spec_version": "1.0.31",
-  "version": 9
+  "version": 10
  }
 }
