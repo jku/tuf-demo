@@ -2,15 +2,15 @@
  "signatures": [
   {
    "keyid": "1bafcc09f6a8a0a0686db7f8b2d5cb4ac41d26ee469905ee348dea6162ea83e6",
-   "sig": "3046022100fd630448f324b36e30194eddd1fbf0141ded265ed21a6df82e3016d3c600478c022100e81b208cf6109127d1dd436f75f0a29910895a1cbeab6c6e14d0adc5fa8a4c9c"
+   "sig": "3046022100f538dd62f686508a8e4f1963a08a9ae3d545891398c2585082833e5ca4c79c44022100b21dbd195176c6e69325f329d44d66ec9330302c8790de1b7af2deb6bf531f20"
   }
  ],
  "signed": {
   "_type": "snapshot",
-  "expires": "2025-05-20T12:09:41Z",
+  "expires": "2025-08-19T07:53:55Z",
   "meta": {
    "jku.json": {
-    "version": 5
+    "version": 6
    },
    "kommendorkapten.json": {
     "version": 3
@@ -23,6 +23,6 @@
    }
   },
   "spec_version": "1.0.31",
-  "version": 10
+  "version": 11
  }
 }
