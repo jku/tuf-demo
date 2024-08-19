@@ -19,6 +19,6 @@ jobs:
 
     steps:
       - name: Signing event
-        uses: theupdateframework/tuf-on-ci/actions/signing-event@main # test before 0.12 release
+        uses: theupdateframework/tuf-on-ci/actions/signing-event@95dc66aba6102bbe911ef93c69395ff62ed69bd4 # v0.11.0
         with:
           token: ${{ secrets.TUF_ON_CI_TOKEN || secrets.GITHUB_TOKEN }}
