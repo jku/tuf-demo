@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: build-and-upload-repository
-        uses: theupdateframework/tuf-on-ci/actions/upload-repository@27c49c016591c7cfea57f6b15296f714a5c4a5f6 # v0.13.0
+        uses: jku/tuf-on-ci/actions/upload-repository@css-link-hack # test css fix
         with:
           gh_pages: true
           ref: ${{ inputs.ref }}
