@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: build-and-upload-repository
-        uses: jku/tuf-on-ci/actions/upload-repository@use-pandoc
+        uses: theupdateframework/tuf-on-ci/actions/upload-repository@main
         with:
           gh_pages: true
           ref: ${{ inputs.ref }}
