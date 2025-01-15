@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Smoke test TUF-on-CI repository with a TUF client
-        uses: theupdateframework/tuf-on-ci/actions/test-repository@main
+        uses: jku/tuf-on-ci/actions/test-repository@fix-naive-datetime-use
         with:
           # when workflow is reused in publish.yml, do not require future validity
           valid_days:  ${{ github.event_name == 'workflow_call' && 0 || 3 }}
