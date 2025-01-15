@@ -19,6 +19,7 @@ jobs:
         with:
           # when workflow is reused in publish.yml, do not require future validity
           # cannot set "valid_days" as this repo signs every single day...
+          valid_days: 30
           offline_valid_days: ${{ github.event_name == 'workflow_call' && 0 || 16 }}
   update-issue:
     runs-on: ubuntu-latest
