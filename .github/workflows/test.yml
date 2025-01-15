@@ -14,7 +14,10 @@ jobs:
     steps:
       - name: Smoke test TUF-on-CI repository with a TUF client
         uses: theupdateframework/tuf-on-ci/actions/test-repository@main
-
+        with:
+          # when workflow is reused in publish.yml, do not require future validity
+          # cannot set "valid_days" as this repo signs every single day...
+          offline_valid_days: ${{ github.event_name == 'workflow_call' && 0 || 16 }}
   update-issue:
     runs-on: ubuntu-latest
     needs: [smoke-test]
