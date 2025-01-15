@@ -5,6 +5,8 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 4,10,16,22 * * *'
+  pull_request:
+    paths: ['.github/workflows/*']
 
 permissions: {}
 
@@ -14,6 +16,10 @@ jobs:
     steps:
       - name: Smoke test TUF-on-CI repository with a TUF client
         uses: theupdateframework/tuf-on-ci/actions/test-repository@main
+        with:
+          # when workflow is reused in publish.yml, do not require future validity
+          valid_days:  ${{ github.event_name == 'workflow_call' && 0 || 3 }}
+          offline_valid_days: ${{ github.event_name == 'workflow_call' && 0 || 16 }}
 
   update-issue:
     runs-on: ubuntu-latest
