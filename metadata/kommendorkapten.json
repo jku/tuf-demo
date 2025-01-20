@@ -2,22 +2,22 @@
  "signatures": [
   {
    "keyid": "61f9609d2655b346fcebccd66b509d5828168d5e447110e261f0bcc8553624bc",
-   "sig": "3045022100ab5de072594d8b6a9533a6fefc2b5567583d9b18df1c26dd4d2129a9018284360220373d5e6f97ac541380c536f3e45b8c82ac33b4192072f247ab908246b90f5492"
+   "sig": ""
   }
  ],
  "signed": {
   "_type": "targets",
-  "expires": "2034-05-18T11:03:36Z",
+  "expires": "2035-01-18T15:13:34Z",
   "spec_version": "1.0.31",
   "targets": {
    "kommendorkapten/newfile.txt": {
     "hashes": {
-     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+     "sha256": "1c3ef9a7c817b4642bcb3cb1456fbce92a6f992df2e1d6ad9d8a2dfb4fdf42f6"
     },
-    "length": 0
+    "length": 12
    }
   },
-  "version": 3,
+  "version": 4,
   "x-tuf-on-ci-expiry-period": 3650,
   "x-tuf-on-ci-signing-period": 60
  }
