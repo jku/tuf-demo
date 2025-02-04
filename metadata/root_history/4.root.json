@@ -2,7 +2,7 @@
  "signatures": [
   {
    "keyid": "aa61e09f6af7662ac686cf0c6364079f63d3e7a86836684eeced93eace3acd81",
-   "sig": ""
+   "sig": "3045022100e6a1d285cc2125dd135680ed1a87f57893f85be1128e4bcaccbf7ffb89736ec0022010ead8bf625af11ba53688d625ef8456ea17103936c2e1158005c3c921bba724"
   },
   {
    "keyid": "08af0ce41206baf8cf6b31623780d600f960a49367a9725e2eca4dd041f74a41",
@@ -22,13 +22,14 @@
     "scheme": "ecdsa-sha2-nistp256",
     "x-tuf-on-ci-keyowner": "@rdimitrov"
    },
-   "1bafcc09f6a8a0a0686db7f8b2d5cb4ac41d26ee469905ee348dea6162ea83e6": {
+   "898df93c77c3dd2844bb60eecf3781392d8779df5407957870b6a9954b41b373": {
     "keytype": "ecdsa",
     "keyval": {
      "public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEubipV7jF5M1Mf4IA8nozDcb5mnBV\nlzVJrixx1AvqIRQ1BQeFHn+9/Dn8h2ZVmsOSDje9sLGjYMvfZ/VGeY3frQ==\n-----END PUBLIC KEY-----\n"
     },
     "scheme": "ecdsa-sha2-nistp256",
-    "x-tuf-on-ci-online-uri": "gcpkms:projects/python-tuf-kms/locations/global/keyRings/tuf-demo/cryptoKeys/snapshot/cryptoKeyVersions/1"
+    "x-tuf-on-ci-online-uri": "gcpkms:projects/python-tuf-kms/locations/global/keyRings/tuf-demo/cryptoKeys/snapshot/cryptoKeyVersions/1",
+    "x-unknown-field-for-test": ""
    },
    "aa61e09f6af7662ac686cf0c6364079f63d3e7a86836684eeced93eace3acd81": {
     "keytype": "ecdsa",
@@ -49,7 +50,7 @@
    },
    "snapshot": {
     "keyids": [
-     "1bafcc09f6a8a0a0686db7f8b2d5cb4ac41d26ee469905ee348dea6162ea83e6"
+     "898df93c77c3dd2844bb60eecf3781392d8779df5407957870b6a9954b41b373"
     ],
     "threshold": 1,
     "x-tuf-on-ci-expiry-period": 365,
@@ -64,7 +65,7 @@
    },
    "timestamp": {
     "keyids": [
-     "1bafcc09f6a8a0a0686db7f8b2d5cb4ac41d26ee469905ee348dea6162ea83e6"
+     "898df93c77c3dd2844bb60eecf3781392d8779df5407957870b6a9954b41b373"
     ],
     "threshold": 1,
     "x-tuf-on-ci-expiry-period": 2,
