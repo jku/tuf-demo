@@ -28,8 +28,7 @@
      "public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEubipV7jF5M1Mf4IA8nozDcb5mnBV\nlzVJrixx1AvqIRQ1BQeFHn+9/Dn8h2ZVmsOSDje9sLGjYMvfZ/VGeY3frQ==\n-----END PUBLIC KEY-----\n"
     },
     "scheme": "ecdsa-sha2-nistp256",
-    "x-tuf-on-ci-online-uri": "gcpkms:projects/python-tuf-kms/locations/global/keyRings/tuf-demo/cryptoKeys/snapshot/cryptoKeyVersions/1",
-    "x-unknown-field-for-test": ""
+    "x-tuf-on-ci-online-uri": "gcpkms:projects/python-tuf-kms/locations/global/keyRings/tuf-demo/cryptoKeys/snapshot/cryptoKeyVersions/1"
    },
    "aa61e09f6af7662ac686cf0c6364079f63d3e7a86836684eeced93eace3acd81": {
     "keytype": "ecdsa",
