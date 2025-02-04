@@ -22,7 +22,7 @@
     "scheme": "ecdsa-sha2-nistp256",
     "x-tuf-on-ci-keyowner": "@rdimitrov"
    },
-   "1bafcc09f6a8a0a0686db7f8b2d5cb4ac41d26ee469905ee348dea6162ea83e6": {
+   "898df93c77c3dd2844bb60eecf3781392d8779df5407957870b6a9954b41b373": {
     "keytype": "ecdsa",
     "keyval": {
      "public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEubipV7jF5M1Mf4IA8nozDcb5mnBV\nlzVJrixx1AvqIRQ1BQeFHn+9/Dn8h2ZVmsOSDje9sLGjYMvfZ/VGeY3frQ==\n-----END PUBLIC KEY-----\n"
@@ -50,7 +50,7 @@
    },
    "snapshot": {
     "keyids": [
-     "1bafcc09f6a8a0a0686db7f8b2d5cb4ac41d26ee469905ee348dea6162ea83e6"
+     "898df93c77c3dd2844bb60eecf3781392d8779df5407957870b6a9954b41b373"
     ],
     "threshold": 1,
     "x-tuf-on-ci-expiry-period": 365,
@@ -65,7 +65,7 @@
    },
    "timestamp": {
     "keyids": [
-     "1bafcc09f6a8a0a0686db7f8b2d5cb4ac41d26ee469905ee348dea6162ea83e6"
+     "898df93c77c3dd2844bb60eecf3781392d8779df5407957870b6a9954b41b373"
     ],
     "threshold": 1,
     "x-tuf-on-ci-expiry-period": 2,
