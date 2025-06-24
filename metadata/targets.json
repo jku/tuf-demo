@@ -21,6 +21,14 @@
      "scheme": "ecdsa-sha2-nistp256",
      "x-tuf-on-ci-keyowner": "@rdimitrov"
     },
+    "388afe72f8758d69d171107c40180391741e20d053623c950a05463799e24c78": {
+     "keytype": "ecdsa",
+     "keyval": {
+      "public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAETtERWQNNQyqQZw8BolFoHqvvgcbw\n0pO7pQNzcHVzTcooYhOIZJcTfdY2rVWN4A7WXZYoNvPBY3XZqLxhAkyrWw==\n-----END PUBLIC KEY-----\n"
+     },
+     "scheme": "ecdsa-sha2-nistp256",
+     "x-tuf-on-ci-keyowner": "@-someone-else-"
+    },
     "61f9609d2655b346fcebccd66b509d5828168d5e447110e261f0bcc8553624bc": {
      "keytype": "ecdsa",
      "keyval": {
@@ -40,7 +48,9 @@
    },
    "roles": [
     {
-     "keyids": [],
+     "keyids": [
+      "388afe72f8758d69d171107c40180391741e20d053623c950a05463799e24c78"
+     ],
      "name": "jku",
      "paths": [
       "jku/*"
@@ -73,7 +83,7 @@
     }
    ]
   },
-  "expires": "2026-06-24T11:51:32Z",
+  "expires": "2026-06-24T11:53:38Z",
   "spec_version": "1.0.31",
   "targets": {
    "file1.txt": {
