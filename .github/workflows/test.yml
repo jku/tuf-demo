@@ -13,6 +13,8 @@ permissions: {}
 jobs:
   smoke-test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: 'read' # for checking out the repository
     steps:
       - name: Smoke test TUF-on-CI repository with a TUF client
         uses: theupdateframework/tuf-on-ci/actions/test-repository@main
@@ -27,9 +29,10 @@ jobs:
     if: always() && !cancelled() && github.workflow == 'TUF-on-CI repository tests' && github.event_name != 'pull_request'
     permissions:
       issues: 'write' # for modifying Issues
+      contents: 'read' # for checking out the repository
     steps:
       - name: Update the issue for the workflow
         uses: theupdateframework/tuf-on-ci/actions/update-issue@main
         with:
-          token: ${{ secrets.TUF_ON_CI_TOKEN || secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           success: ${{ !contains(needs.*.result, 'failure') }}

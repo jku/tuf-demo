@@ -12,14 +12,24 @@ jobs:
   handle-signing-event:
     name: TUF-on-CI signing event
     runs-on: ubuntu-latest
-    permissions:
-      contents: write # for making commits in signing event and for modifying draft state
-      pull-requests: write # for modifying signing event pull requests
-      actions: write # for dispatching another signing-event workflow
+    # permissions:
+      # contents: write # for making commits in signing event and for modifying draft state (not needed if using GitHub App)
+      # pull-requests: write # for modifying signing event pull requests (not needed if using GitHub App)
+      # actions: write # for dispatching another signing-event workflow (not needed if using GitHub App)
 
     steps:
+      - name: Create GitHub App token
+        id: app-token
+        if: github.repository_owner == 'jku' && vars.TUF_ON_CI_APP_ID != ''
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ vars.TUF_ON_CI_APP_ID }}
+          private-key: ${{ secrets.TUF_ON_CI_APP_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+
       - name: Signing event
         if: github.repository_owner == 'jku' # avoid running in forks
         uses: theupdateframework/tuf-on-ci/actions/signing-event@main
         with:
-          token: ${{ secrets.TUF_ON_CI_TOKEN || secrets.GITHUB_TOKEN }}
+          token: ${{ steps.app-token.outputs.token || secrets.GITHUB_TOKEN }}
